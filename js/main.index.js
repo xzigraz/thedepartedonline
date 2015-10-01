@@ -1,12 +1,17 @@
 define(
 	[
-		'jquery',
-		'marionette',
-		'radio'
+		'pages/home',
+		'jquery'
 	],
-	function () {
+	function (HomeLayout) {
 		'use strict';
 
-		console.log('load!');
+		$(document).ready(function () {
+			var homepage = new HomeLayout.index();
+
+			homepage.render();
+
+			$('body').prepend(homepage.$el);
+		});
 	}
 );
