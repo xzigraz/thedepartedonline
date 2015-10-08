@@ -1,0 +1,13 @@
+#logo {
+	position: relative;
+	width: 318px;
+	height: 88px;
+	background: {
+		image: image-url('logo.png');
+		size: contain;
+		repeat: no-repeat;
+		position: top left;
+	}
+	top: 18px;
+	left: 38px;
+}
