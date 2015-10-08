@@ -1,3 +1,4 @@
-/.sass-cache
+/.sass-cache/*
 .idea/*
 js/bower_components/*
+/src-images/*
