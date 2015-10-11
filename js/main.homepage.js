@@ -1,13 +1,13 @@
 define(
 	[
-		'pages/home',
+		'modules/module.layout',
 		'jquery'
 	],
-	function (HomeLayout) {
+	function (PageLayout) {
 		'use strict';
 
 		$(document).ready(function () {
-			var homepage = new HomeLayout.index();
+			var homepage = new PageLayout();
 
 			homepage.render();
 

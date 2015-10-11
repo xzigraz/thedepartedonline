@@ -5,13 +5,11 @@ define(
 		'radio'
 	],
 	function (LayoutTemplate) {
-		var Modules = Modules || {};
-
-		Modules.PageLayout = Marionette.layout.extend({
+		var PageLayout = Marionette.Layout.extend({
 			className: 'main-content',
 			template: LayoutTemplate
 		});
 
-		return Modules;
+		return PageLayout;
 	}
 );
