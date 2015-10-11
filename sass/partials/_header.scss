@@ -1,5 +1,6 @@
 #logo {
 	position: relative;
+	display: inline-block;
 	width: 318px;
 	height: 88px;
 	background: {
@@ -10,4 +11,42 @@
 	}
 	top: 18px;
 	left: 38px;
+}
+
+#navigation-container {
+	float: right;
+	margin-right: 38px;
+	ul {
+		float: left;
+		list-style: none;
+		margin-top: 65px;
+	}
+	li {
+		float: left;
+		margin-left: 40px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	a {
+		font-size: 26px;
+		color: $navigationLinkColor;
+		font-family: $navigationLinkFontFamily;
+		text-decoration: none;
+		&:hover {
+			padding-bottom: 17px;
+			border-bottom: 3px solid $navigationLinkColorHover
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	#navigation-container {
+		ul {
+			margin-top: 75px;
+		}
+		a {
+			font-size: 100%;
+		}
+	}
 }

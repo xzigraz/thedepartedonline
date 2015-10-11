@@ -1,10 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 $colorWhite: #fff;
 $colorBlock: #000;
 
-$colorGrayCCC: #ccc;
+$gray-ccc: #ccc;
 
-$colorBlue: #2ecdc9;
+$blue-2ecdc9: #2ecdc9;
 
-$headerBackground: $colorBlue;
+$orange-cd2e32: #cd2e32;
 
-$footerBackground: $colorGrayCCC;
+$headerBackground: $blue-2ecdc9;
+$navigationLinkColor: $colorWhite;
+$navigationLinkColorHover: $orange-cd2e32;
+$navigationLinkFontFamily: 'Roboto Light', sans-serif;
+
+$footerBackground: $gray-ccc;

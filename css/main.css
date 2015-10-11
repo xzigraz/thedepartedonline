@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -429,6 +430,7 @@ body {
 
 #logo {
   position: relative;
+  display: inline-block;
   width: 318px;
   height: 88px;
   background-image: url('../images/logo.png?1444109985');
@@ -437,4 +439,40 @@ body {
   background-position: top left;
   top: 18px;
   left: 38px;
+}
+
+#navigation-container {
+  float: right;
+  margin-right: 38px;
+}
+#navigation-container ul {
+  float: left;
+  list-style: none;
+  margin-top: 65px;
+}
+#navigation-container li {
+  float: left;
+  margin-left: 40px;
+}
+#navigation-container li:first-child {
+  margin-left: 0;
+}
+#navigation-container a {
+  font-size: 26px;
+  color: #fff;
+  font-family: "Roboto Light", sans-serif;
+  text-decoration: none;
+}
+#navigation-container a:hover {
+  padding-bottom: 17px;
+  border-bottom: 3px solid #cd2e32;
+}
+
+@media (max-width: 1024px) {
+  #navigation-container ul {
+    margin-top: 75px;
+  }
+  #navigation-container a {
+    font-size: 100%;
+  }
 }

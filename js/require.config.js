@@ -53,6 +53,7 @@ require.config({
 		'marionette': 'bower_components/marionette/lib/backbone.marionette',
 		'radio': 'bower_components/backbone.radio/build/backbone.radio.min',
 		'hbs': 'bower_components/require-handlebars-plugin/hbs',
-		'json2': 'bower_components/json2/json2'
+		'json2': 'bower_components/json2/json2',
+		'modules': 'modules/modules'
 	}
 });
