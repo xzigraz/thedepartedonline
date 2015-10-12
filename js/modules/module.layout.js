@@ -2,6 +2,7 @@ define(
 	[
 		'hbs!templates/layout',
 		'modules/module.header',
+		'modules/module.navigation',
 		'marionette',
 		'radio'
 	],
