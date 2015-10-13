@@ -27,15 +27,24 @@
 		&:first-child {
 			margin-left: 0;
 		}
+		&.selected {
+			a {
+				color: $navigationLinkColorHover;
+				border-bottom-width: 3px;
+			}
+		}
 	}
 	a {
 		font-size: 26px;
 		color: $navigationLinkColor;
 		font-family: $navigationLinkFontFamily;
 		text-decoration: none;
+		@include transition-duration(0.6s);
+		border-bottom: 0px solid $navigationLinkColorHover;
+		padding-bottom: 17px;
 		&:hover {
-			padding-bottom: 17px;
-			border-bottom: 3px solid $navigationLinkColorHover
+			color: $navigationLinkColorHover;
+			border-bottom-width: 3px;
 		}
 	}
 }

@@ -21,6 +21,14 @@ define(
 				'click': 'handleClick'
 			},
 
+			modelEvents: {
+				'change:isSelected': 'handleSelectionChange'
+			},
+
+			initialize: function () {
+				this.updateSelectionClass();
+			},
+
 			/**
 			 * Handles click event on the itemview.
 			 * @param event
@@ -28,6 +36,32 @@ define(
 			handleClick: function (event) {
 				event.preventDefault();
 				console.log('click click');
+			},
+
+			/**
+			 * On model's isSelected attribute change, call updateSelectionClass.
+			 */
+			handleSelectionChange: function () {
+				this.updateSelectionClass();
+			},
+
+			/**
+			 * APIs
+			 */
+
+			/**
+			 * Check to see if the model is selected or not.
+			 * @returns {boolean}
+			 */
+			isSelected: function () {
+				return this.model.isSelected();
+			},
+
+			/**
+			 * Toggle selected class based on the value of isSelected attribute.
+			 */
+			updateSelectionClass: function () {
+				this.$el.toggleClass('selected', this.isSelected());
 			}
 		});
 
@@ -77,7 +111,21 @@ define(
 				}
 
 				return this.listItems;
+			},
+
+			/**
+			 * APIs
+			 */
+
+			/**
+			 * Set a navigation item to selected, delegate the event to collection.
+			 * @method setSelected
+			 * @param displayName
+			 */
+			setSelected: function (displayName) {
+				this.collection.setSelected(displayName);
 			}
+
 		});
 
 		return Navigation;

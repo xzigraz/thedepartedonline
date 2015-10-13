@@ -14,10 +14,11 @@ define(
 			var logo = new Logo();
 
 			// Create navigation view
-			var navigation = new Navigation({
+			var navigation = window.xzigraz = new Navigation({
 				listItems: [
 					{
-						'displayName': 'Home'
+						'displayName': 'Home',
+						'isSelected': true
 					},
 					{
 						'displayName': 'Portfolio'

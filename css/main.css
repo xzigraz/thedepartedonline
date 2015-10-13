@@ -457,15 +457,25 @@ body {
 #navigation-container li:first-child {
   margin-left: 0;
 }
+#navigation-container li.selected a {
+  color: #cd2e32;
+  border-bottom-width: 3px;
+}
 #navigation-container a {
   font-size: 26px;
   color: #fff;
   font-family: "Roboto Light", sans-serif;
   text-decoration: none;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  border-bottom: 0px solid #cd2e32;
+  padding-bottom: 17px;
 }
 #navigation-container a:hover {
-  padding-bottom: 17px;
-  border-bottom: 3px solid #cd2e32;
+  color: #cd2e32;
+  border-bottom-width: 3px;
 }
 
 @media (max-width: 1024px) {
