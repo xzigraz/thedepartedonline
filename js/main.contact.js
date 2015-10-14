@@ -30,7 +30,7 @@ define(
 			// Prepend homepage view to body.
 			$('body').prepend(homepage.$el);
 
-			navigation.setSelected('Home');
+			navigation.setSelected('Contact');
 		});
 	}
 );

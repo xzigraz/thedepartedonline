@@ -35,7 +35,18 @@ define(
 			 */
 			handleClick: function (event) {
 				event.preventDefault();
-				console.log('click click');
+				var endPoint = this.model.get('url'),
+					urlLocation = this.model.get('location'),
+					currentUrlPathArray = window.location.pathname.split( '/'),
+					url;
+
+				if (urlLocation === 'external') {
+					url = endPoint;
+				} else {
+					url = '/' + currentUrlPathArray[1] + '/' + endPoint + '.html';
+				}
+
+				window.location.href = url;
 			},
 
 			/**
