@@ -43,7 +43,7 @@ define(
 				if (urlLocation === 'external') {
 					url = endPoint;
 				} else {
-					url = window.location.protocol + '//' + window.location.host + '/' + currentUrlPathArray[1] + '/' + endPoint + '.html';
+					url = window.location.origin + '/' + endPoint + '.html';
 				}
 
 				window.location.href = url;

@@ -15,7 +15,7 @@
 
 #navigation-container {
 	float: right;
-	margin-right: 38px;
+	margin-right: $pageSidePadding;
 	ul {
 		float: left;
 		list-style: none;

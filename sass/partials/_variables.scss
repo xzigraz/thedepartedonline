@@ -9,9 +9,13 @@ $blue-2ecdc9: #2ecdc9;
 
 $orange-cd2e32: #cd2e32;
 
+$pageFontFamily: 'Roboto Light', sans-serif;
+$pageSidePadding: 38px;
+
 $headerBackground: $blue-2ecdc9;
 $navigationLinkColor: $colorWhite;
 $navigationLinkColorHover: $orange-cd2e32;
-$navigationLinkFontFamily: 'Roboto Light', sans-serif;
+$navigationLinkFontFamily: $pageFontFamily;
 
 $footerBackground: $gray-ccc;
+$footerHeight: 120px;

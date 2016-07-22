@@ -28,6 +28,8 @@ define(
 			 */
 			initialize: function () {
 				this.getHeader();
+				this.getBody();
+				this.createFooter();
 			},
 
 			/**
@@ -35,19 +37,55 @@ define(
 			 */
 			onRender: function () {
 				this.header.show(this.pageHeader);
+				this.body.show(this.pageBody);
+				this.footer.show(this.pageFooter);
 			},
 
 			/**
 			 * Get the headerView and construct a new PageHeader view.
 			 */
 			getHeader: function () {
-				var self = this,
-					headerView = Marionette.getOption(self, 'headerView');
+				var headerView = Marionette.getOption(this, 'headerView');
 
 				if (headerView.length) {
 					this.pageHeader = new PageHeader({
 						headerView: headerView
+					});
+				} else {
+					this.pageHeader = new Marionette.ItemView({
+						template: function () {
+							return 'Something went wrong. Header view has some errors.';
+						}
 					})
+				}
+			},
+
+			getBody: function () {
+				var bodyView = Marionette.getOption(this, 'bodyView');
+
+				if (bodyView instanceof Marionette.View) {
+					this.pageBody = bodyView;
+				} else {
+					this.pageBody = new Marionette.ItemView({
+						template: function () {
+							return 'Well, that\'s embarrassing, there\'s no content on this page.';
+						}
+					});
+				}
+			},
+
+			createFooter: function () {
+				var footerView = Marionette.getOption(this, 'footerView');
+
+				if (footerView instanceof Marionette.View) {
+					this.pageFooter = footerView;
+				} else {
+					this.pageFooter = new Marionette.ItemView({
+						tagName: 'span',
+						template: function () {
+							return '&copy; The Departed Online.';
+						}
+					});
 				}
 			}
 		});

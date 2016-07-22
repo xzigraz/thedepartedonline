@@ -1,11 +1,12 @@
 body {
 	background: {
-		image: image-url('masking-background.png'), image-url('pressing-on-red.jpg');
+		image: image-url('masking-background-1200.png'), image-url('pressing-on-red-1200.jpg');
 		repeat: repeat-x, no-repeat;
 		attachment: fixed, fixed;
 		position: center 120px, center 120px;
 		size: contain, contain;
 	}
+	min-width: 960px;
 }
 
 #header {
@@ -26,7 +27,7 @@ body {
 #footer {
 	position: absolute;
 	width: 100%;
-	height: 120px;
+	height: $footerHeight;
 	bottom: 0;
 	background: {
 		color: $footerBackground;
@@ -34,3 +35,4 @@ body {
 }
 
 @import "header";
+@import "footer";
