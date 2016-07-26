@@ -1,0 +1,39 @@
+#logo {
+	background: {
+		image: image-url('logo.png');
+		size: contain;
+		repeat: no-repeat;
+		position: top left;
+	}
+}
+
+#navigation-container {
+	li {
+		&.selected {
+			a {
+				color: $navigationLinkColorHover;
+				border-bottom-width: 3px;
+			}
+		}
+	}
+	a {
+		font-size: 26px;
+		color: $navigationLinkColor;
+		font-family: $navigationLinkFontFamily;
+		text-decoration: none;
+		@include transition-duration(0.6s);
+		border-bottom: 0px solid $navigationLinkColorHover;
+		&:hover {
+			color: $navigationLinkColorHover;
+			border-bottom-width: 3px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	#navigation-container {
+		a {
+			font-size: 100%;
+		}
+	}
+}

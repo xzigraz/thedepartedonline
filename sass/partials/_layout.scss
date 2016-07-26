@@ -1,32 +1,30 @@
 body {
-	background: {
-		image: image-url('masking-background-1200.png'), image-url('pressing-on-red-1200.jpg');
-		repeat: repeat-x, no-repeat;
-		attachment: fixed, fixed;
-		position: center 120px, center 120px;
-		size: contain, contain;
-	}
-	min-width: 960px;
+	min-width: $minPageWidth;
 }
 
-#header {
-	height: 120px;
-	width: 100%;
+#page-header {
+	height: $headerHeight;
+	width: $pageWidth;
 	background: {
 		color: $headerBackground;
 	}
 }
 
-#body {
-	width: 100%;
-	background: {
-		color: $colorWhite;
-	}
+#page-body {
+	width: $pageWidth;
+	height: $pageWidth * 0.3125;
+	min-height: $minPageWidth * 0.3125;
+	.content {
+		&.homepage {
+			position: relative;
+			top: $pageWidth * 0.3125;
+		}
+}
 }
 
-#footer {
+#page-footer {
 	position: absolute;
-	width: 100%;
+	width: $pageWidth;
 	height: $footerHeight;
 	bottom: 0;
 	background: {
@@ -35,4 +33,5 @@ body {
 }
 
 @import "header";
+@import "content.style";
 @import "footer";

@@ -2,7 +2,6 @@ define(
 	[
 		'hbs!templates/layout',
 		'modules/module.header',
-		'modules/module.navigation',
 		'marionette',
 		'radio'
 	],
@@ -18,9 +17,9 @@ define(
 			template: LayoutTemplate,
 
 			regions: {
-				header: '#header',
-				body: '#body',
-				footer: '#footer'
+				header: '#page-header',
+				body: '#page-body',
+				footer: '#page-footer'
 			},
 
 			/**
