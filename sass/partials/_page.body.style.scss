@@ -1,0 +1,38 @@
+#page-body {
+	background: {
+		image: image-url('masking-background-1200.png'), image-url('pressing-on-red-1200.jpg');
+		repeat: repeat-x, no-repeat;
+		attachment: fixed, fixed;
+		position: center 120px, center 120px;
+		size: contain, contain;
+	}
+	.content{
+		font: {
+			size: $bodyFontSize;
+		}
+		color: rgba($colorBlock, 0.8);
+		&.homepage {
+			.start-of-the-line {
+				font: {
+					size: 60px;
+					family: 'Roboto Thin', sans-serif;
+				}
+				color: $startOfTheLineColor;
+			}
+		}
+		&.resume {
+			iframe {
+				border: 0;
+			}
+			.icon {
+				&.pdf {
+					background: {
+						image: image-url("pdf-icon-64.png");
+						repeat: no-repeat;
+						position: 0 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -15,11 +15,29 @@ body {
 	height: $pageWidth * 0.3125;
 	min-height: $minPageWidth * 0.3125;
 	.content {
+		position: relative;
+		margin: 0 $pageSidePadding;
+		padding: 20px 0;
 		&.homepage {
-			position: relative;
 			top: $pageWidth * 0.3125;
 		}
-}
+		&.resume {
+			width: $pageWidth * 1 / 2;
+			margin: 0 calc((100vw - #{$pageWidth * 1 / 2}) / 2);
+			iframe {
+				width: 100%;
+				height: calc(100vh - #{$headerHeight + $footerHeight} - 40px);
+			}
+			.icon {
+				position: absolute;
+				top: 20px;
+				right: -80px;
+				width: 64px;
+				height: 64px;
+				display: block;
+			}
+		}
+	}
 }
 
 #page-footer {
@@ -32,6 +50,6 @@ body {
 	}
 }
 
-@import "header";
-@import "content.style";
-@import "footer";
+@import "page.header";
+@import "page.body.style";
+@import "page.footer";

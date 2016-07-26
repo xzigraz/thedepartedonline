@@ -5,11 +5,9 @@ define(
 		'modules/module.layout',
 		'modules/module.logo',
 		'modules/module.navigation',
-		'modules/module.body',
-		'instafeed',
-		'jquery'
+		'modules/module.body'
 	],
-	function (homepageMessageTemplate, NavigationItems, PageLayout, LogoView, NavigationView, BaseBodyView, Instafeed) {
+	function (homepageMessageTemplate, NavigationItems, PageLayout, LogoView, NavigationView, BaseBodyView) {
 		'use strict';
 
 		$(document).ready(function () {
@@ -32,14 +30,6 @@ define(
 				headerView: [logo, navigation],
 				bodyView: homepageContent
 			});
-
-			var feed = new Instafeed({
-				get: 'user',
-				userId: '1353167671',
-				clientId: '89fb02fc07594c0380261546ce3ba67b'
-			});
-
-			feed.run();
 
 			// Render homepage view
 			homepage.render();
