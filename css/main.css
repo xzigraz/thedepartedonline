@@ -527,6 +527,9 @@ body {
   font-size: 36px;
   color: rgba(0, 0, 0, 0.8);
 }
+#page-body .content.homepage {
+  line-height: 1;
+}
 #page-body .content.homepage .start-of-the-line {
   font-size: 60px;
   font-family: 'Roboto Thin', sans-serif;
@@ -544,4 +547,13 @@ body {
 #page-footer span {
   line-height: 120px;
   margin-left: 38px;
+}
+
+@media (min-width: 1800px) {
+  #page-body .content {
+    padding: 5px 0;
+  }
+  #page-body .content.resume iframe {
+    height: calc(100vh - 240px - 10px);
+  }
 }
