@@ -67,7 +67,7 @@ define(
 				} else {
 					this.pageBody = new Marionette.ItemView({
 						template: function () {
-							return 'Well, that\'s embarrassing, there\'s no content on this page.';
+							return 'Well, this is embarrassing, there\'s no content on this page.';
 						}
 					});
 				}

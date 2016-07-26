@@ -37,7 +37,6 @@ define(
 				event.preventDefault();
 				var endPoint = this.model.get('url'),
 					urlLocation = this.model.get('location'),
-					currentUrlPathArray = window.location.pathname.split( '/'),
 					url;
 
 				if (urlLocation === 'external') {
