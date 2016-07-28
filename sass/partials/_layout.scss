@@ -37,6 +37,24 @@ body {
 				display: block;
 			}
 		}
+		&.contact {
+			height: calc(100vh - #{$headerHeight + $footerHeight} - 40px);
+			overflow: auto;
+			top: 20px;
+			.self {
+				padding: 0 20px;
+				p {
+					&:first-child {
+						margin: {
+							top: 10px;
+						}
+					}
+				}
+			}
+			.contact-info {
+				padding: 0 20px;
+			}
+		}
 	}
 }
 

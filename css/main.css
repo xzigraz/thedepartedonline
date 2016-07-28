@@ -441,6 +441,20 @@ body {
   height: 64px;
   display: block;
 }
+#page-body .content.contact {
+  height: calc(100vh - 240px - 40px);
+  overflow: auto;
+  top: 20px;
+}
+#page-body .content.contact .self {
+  padding: 0 20px;
+}
+#page-body .content.contact .self p:first-child {
+  margin-top: 10px;
+}
+#page-body .content.contact .contact-info {
+  padding: 0 20px;
+}
 
 #page-footer {
   position: absolute;
@@ -531,7 +545,7 @@ body {
   line-height: 1;
 }
 #page-body .content.homepage .start-of-the-line {
-  font-size: 60px;
+  font-size: 61.2px;
   font-family: 'Roboto Thin', sans-serif;
   color: #cd2e32;
 }
@@ -542,6 +556,18 @@ body {
   background-image: url('../images/pdf-icon-64.png?1469565471');
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+#page-body .content.contact {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 18px;
+}
+#page-body .content.contact .self .start-of-the-line {
+  font-size: 19.8px;
+  color: #cd2e32;
+}
+#page-body .content.contact .contact-info a {
+  color: #cd2e32;
 }
 
 #page-footer span {
