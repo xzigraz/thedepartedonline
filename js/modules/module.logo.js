@@ -17,8 +17,12 @@ define(
 				return '';
 			},
 
-			triggers: {
-				'click': 'logo:clicked' // Broadcast trigger when $el is clicked.
+			events: {
+				'click': 'handleClick'
+			},
+
+			handleClick: function () {
+				window.location.href = 'http://www.thedepartedonline.com';
 			}
 		});
 

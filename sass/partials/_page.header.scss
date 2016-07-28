@@ -5,6 +5,9 @@
 	height: 88px;
 	top: 18px;
 	left: 38px;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 #navigation-container {

@@ -472,6 +472,9 @@ body {
   top: 18px;
   left: 38px;
 }
+#logo:hover {
+  cursor: pointer;
+}
 
 #navigation-container {
   float: right;
